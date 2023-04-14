@@ -4,6 +4,7 @@ import processing.core.*;
 import java.util.*;
 
 
+
 public class Menu implements Scene
 {
     
@@ -34,6 +35,10 @@ if(p.key == PApplet.TAB){
         p.changeScene(1);
         }
         
+    }
+    
+    public void handleMousePressed(){
+    
     }
     
     

@@ -1,7 +1,8 @@
-//3
+//4
 
 import processing.core.*;
 import java.util.*;
+
 
 
 public class Test implements Scene
@@ -30,6 +31,11 @@ if(p.keyCode == PApplet.SHIFT){
        
       }
       }
+      
+      public void handleMousePressed(){
+    
+    }
+    
 
     private Game p;
 }

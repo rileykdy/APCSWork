@@ -10,7 +10,7 @@ int current = 0;
 
   public void settings()
     {
-        size(1000, 700);
+        fullScreen();
     }
 
     public void setup()
@@ -19,6 +19,7 @@ int current = 0;
         scenes.add(new Menu(this));
         scenes.add(new Choice(this));
         scenes.add(new Gameover(this));
+        scenes.add(new TripleChoice(this));
         scenes.add(new Test(this));
     }
     
@@ -128,6 +129,11 @@ void gameOver(){
      public void keyPressed()
     {
         scenes.get(current).handleKeyPressed();
+    }
+    
+    public void mousePressed()
+    {
+        scenes.get(current).handleMousePressed();
     }
     
     public void changeScene(int n)

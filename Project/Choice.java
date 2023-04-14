@@ -5,6 +5,7 @@ import processing.core.*;
 import java.util.*;
 
 
+
 public class Choice implements Scene
 {
     public Choice(Game p)
@@ -36,24 +37,29 @@ public class Choice implements Scene
     public void handleKeyPressed()
     {
 
-if(PApplet.mousePressed==true
-      && PApplet.mouseX > p.width/4 - 55 && PApplet.mouseX < p.width/4 + 55
-      && PApplet.mouseY > p.height*3/4 -40 && PApplet.mouseY < p.height*3/4 +40){
+
+        }
+        
+        public void handleMousePressed(){
+    if(p.mousePressed==true
+      && p.mouseX > p.width/4 - 55 && p.mouseX < p.width/4 + 55
+      && p.mouseY > p.height*3/4 -40 && p.mouseY < p.height*3/4 +40){
         
         //p.key = PApplet.ENTER;
         p.changeScene(3);
         
         }
       
-      else if(PApplet.mousePressed==true
-      && PApplet.mouseX > p.width*3/4 - 55 && PApplet.mouseX < p.width*3/4 + 55
-      && PApplet.mouseY > p.height*3/4 -40 && PApplet.mouseY < p.height*3/4 +40){
+      else if(p.mousePressed==true
+      && p.mouseX > p.width*3/4 - 55 && p.mouseX < p.width*3/4 + 55
+      && p.mouseY > p.height*3/4 -40 && p.mouseY < p.height*3/4 +40){
         
         //p.key = PApplet.ENTER;
         p.changeScene(2);
         
         }
-        }
+    }
+    
         
     private Game p;
    

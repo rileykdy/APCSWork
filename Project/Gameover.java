@@ -2,6 +2,7 @@
 
 import processing.core.*;
 import java.util.*;
+  
 
 
 public class Gameover implements Scene
@@ -32,6 +33,11 @@ if(p.keyCode == PApplet.SHIFT){
         p.changeScene(0);
       }
     }
+    
+    public void handleMousePressed(){
+    
+    }
+    
 
     private Game p;
 }
