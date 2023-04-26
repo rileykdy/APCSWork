@@ -11,11 +11,17 @@ public class Menu implements Scene
     public Menu(Game p)
     {
         this.p = p;
+        /*
+        this.c1 = c1;
+        this.c2 = c2;
+        this.c3 = c3;
+        */
     }
 
     public void display()
     {
-    p.background(180);
+    //p.textFont(titleFont);
+    p.background(p.getColor1(), p.getColor2(), p.getColor3());
       p.textAlign(PApplet.CENTER);
       p.fill(0);
       p.textSize(200);

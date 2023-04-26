@@ -6,21 +6,51 @@ import java.util.*;
 public class Game extends PApplet{
 
 //String gameState;
-int current = 0;
+int current = 10;
+int c1 = 180;
+int c2 = 180;
+int c3 = 180;
+
+//PApplet.PFont titleFont;
 
   public void settings()
     {
         fullScreen();
+      
     }
 
     public void setup()
     {
-        scenes = new ArrayList<Scene>();
-        scenes.add(new Menu(this));
+    
+        
+        //PApplet.titleFont = PApplet.createFont("04B_30__.TTF", 24);
+        
+        
+        scenes = new ArrayList<Scene>(); 
+        scenes.add(new Menu(this)); //0
         scenes.add(new Choice(this));
-        scenes.add(new Gameover(this));
+        scenes.add(new Gameover1(this));
         scenes.add(new TripleChoice(this));
         scenes.add(new Test(this));
+        scenes.add(new Curious(this)); //5
+        scenes.add(new Gameover2(this));
+        scenes.add(new noGame(this));
+        scenes.add(new Rules(this));
+        scenes.add(new Gameover3(this));
+        scenes.add(new gameChoiceOne(this)); //10
+        scenes.add(new Minigame(this));
+        scenes.add(new Gameover4(this));
+        scenes.add(new funChoice(this));
+        scenes.add(new minigameThanks(this));
+        scenes.add(new Gameover5(this)); //15
+        scenes.add(new workChoice(this));
+        scenes.add(new colorChoice(this));
+        scenes.add(new codeExp(this));
+        scenes.add(new codeExp2(this));
+        scenes.add(new Gameover6(this)); //20
+        scenes.add(new Quiz(this));
+        scenes.add(new Gameover7(this));
+        scenes.add(new gameChoiceTwo(this));
     }
     
      public void draw()
@@ -30,101 +60,6 @@ int current = 0;
             
     }
     
-    
-
-  /*  public void draw()
-    {
-        //clearBackground();
-
-        if(gameState == "START") {
-          startGame();
-        }  else if(gameState == "CHOICE"){
-          chooseGame();
-        } else if (gameState == "TEST"){
-          gameTest();
-        } else if(gameState == "GAMEOVER"){
-          gameOver();
-        }
-
-        }
-
-*/
-/*
-void startGame(){
-      background(180);
-      textAlign(CENTER);
-      fill(0);
-      textSize(200);
-      text("THE GAME", width/2, 200);
-      textSize(25);
-      text("Welcome to THE GAME! Press tab to begin.", width/2, 275);
-      if(key == TAB){
-        key = ENTER;
-        gameState = "CHOICE";
-      }
-}
-
-void chooseGame(){
-      background(180);
-      textAlign(CENTER);
-      fill(255);
-      stroke(13, 168, 42);
-      rect(width/4 - 55, height*3/4 -40, 110, 50);
-      stroke(181, 20, 14);
-      rect(width*3/4 - 55, height*3/4 -40, 110, 50);
-
-      fill(0);
-      textSize(100);
-      text("Ready to play?", width/2, 200);
-      textSize(50);
-      text("YES!", width/4, height*3/4 );
-      text("NO!", width*3/4, height*3/4 );
-
-      if(mousePressed==true
-      && mouseX > width/4 - 55 && mouseX < width/4 + 55
-      && mouseY > height*3/4 -40 && mouseY < height*3/4 +40){
-        key = ENTER;
-        gameState = "TEST";
-      }
-      else if(mousePressed==true
-      && mouseX > width*3/4 - 55 && mouseX < width*3/4 + 55
-      && mouseY > height*3/4 -40 && mouseY < height*3/4 +40){
-        key = ENTER;
-        gameState = "GAMEOVER";
-      }
-
-}
-
-void gameTest(){
-      background(180);
-      textAlign(CENTER);
-      fill(0);
-      textSize(100);
-      text("Under Construction", width/2, 130);
-      textSize(25);
-      text("Press shift to restart.", width/2, 275);
-      if(keyCode == SHIFT){
-        key = ENTER;
-        gameState = "START";
-      }
-}
-
-void gameOver(){
-      background(180);
-      textAlign(CENTER);
-      fill(0);
-      textSize(150);
-      text("GAME OVER", width/2, 200);
-      textSize(40);
-      text("Why did you do that??", width/2, 275);
-      textSize(15);
-      text("Press shift to restart.", width/2, 475);
-      if(keyCode == SHIFT){
-        key = ENTER;
-        gameState = "START";
-      }
-    }
-*/
 
      public void keyPressed()
     {
@@ -142,8 +77,33 @@ void gameOver(){
         
     }
     
+    public void changeColor(int xc1, int xc2, int xc3)
+    {
+        c1 = xc1;
+        c2 = xc2;
+        c3 = xc3;
+    }
+    
+    public int getColor1()
+    {
+        return c1;
+        
+    }
+    
+    public int getColor2()
+    {
+        return c2;
+        
+    }
+    
+    public int getColor3()
+    {
+        return c3;
+        
+    }
+    
     private ArrayList<Scene> scenes;
- 
+    
     
     public static void main(String[] args)
     {

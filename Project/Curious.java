@@ -1,15 +1,14 @@
-//1
-//Are you ready?
-
+//5
+//Aren't you curious why this game looks so bad?
 
 import processing.core.*;
 import java.util.*;
 
 
 
-public class Choice implements Scene
+public class Curious implements Scene
 {
-    public Choice(Game p)
+    public Curious(Game p)
     {
         this.p = p;
     }
@@ -25,11 +24,11 @@ public class Choice implements Scene
       p.rect(p.width*3/4 - 55, p.height*3/4 -40, 110, 50);
 
       p.fill(0);
-      p.textSize(100);
-      p.text("Ready to play?", p.width/2, 200);
       p.textSize(50);
-      p.text("YES!", p.width/4, p.height*3/4 );
-      p.text("NO!", p.width*3/4, p.height*3/4 );
+      p.text("Aren't you curious as to why this game looks so bad?", p.width/2, 200);
+      p.textSize(50);
+      p.text("YES", p.width/4, p.height*3/4 );
+      p.text("NO", p.width*3/4, p.height*3/4 );
 
     }
     
@@ -42,14 +41,13 @@ public class Choice implements Scene
         }
         
         public void handleMousePressed(){
-        
     //if yes
     if(p.mousePressed==true
       && p.mouseX > p.width/4 - 55 && p.mouseX < p.width/4 + 55
       && p.mouseY > p.height*3/4 -40 && p.mouseY < p.height*3/4 +40){
         
         //p.key = PApplet.ENTER;
-        p.changeScene(5);
+        p.changeScene(7);
         
         }
       
@@ -59,7 +57,7 @@ public class Choice implements Scene
       && p.mouseY > p.height*3/4 -40 && p.mouseY < p.height*3/4 +40){
         
         //p.key = PApplet.ENTER;
-        p.changeScene(2);
+        p.changeScene(6);
         
         }
     }
@@ -68,5 +66,4 @@ public class Choice implements Scene
     private Game p;
    
 }
-
 
