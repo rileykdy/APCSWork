@@ -17,7 +17,7 @@ public class Gameover1 implements Scene
     {
         p.background(p.getColor1(), p.getColor2(), p.getColor3());
       //p.textAlign(PApplet.CENTER, PApplet.CENTER);
-      p.fill(0);
+      p.fill(p.getTC1(), p.getTC2(), p.getTC3());
       p.textSize(150);
       p.text("GAME OVER", p.width/2, 150);
       p.textSize(40);

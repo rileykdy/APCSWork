@@ -1,14 +1,14 @@
-//13
-//Post minigame win did you have fun?
+//26
+//Font change 
 
 import processing.core.*;
 import java.util.*;
 
 
 
-public class funChoice implements Scene
+public class pickFont implements Scene
 {
-    public funChoice(Game p)
+    public pickFont(Game p)
     {
         this.p = p;
     }
@@ -22,26 +22,29 @@ public class funChoice implements Scene
     p.textAlign(PApplet.CENTER, PApplet.CENTER);
     
     }
+    
     else;
       p.fill(255);
-      p.stroke(13, 168, 42);
+      p.stroke(51, 119, 196);
       p.rect(p.width/4 - 150, p.height*3/4 -40, 300, 50);
-      p.stroke(181, 20, 14);
+      p.stroke(171, 51, 163);
       p.rect(p.width*3/4 - 150, p.height*3/4 -40, 300, 50);
 
       p.fill(p.getTC1(), p.getTC2(), p.getTC3());
       p.textSize(45);
-      p.text("Nice job! Did you like the minigame?", p.width/2, 200);
-      p.textSize(34);
-      p.text("Yes, I loved it!", p.width/4, p.height*3/4 );
-      p.text("No, it sucked.", p.width*3/4, p.height*3/4 );
+      
+      p.text("What do you think of this font?", p.width/2, 200);
+      p.textSize(25);
+      p.fill(0);
+      p.text("I love it!", p.width/4, p.height*3/4 );
+      p.text("Return to the old font.", p.width*3/4, p.height*3/4 );
+     
+      
 
 
     }
     
-    
-
-    public void handleKeyPressed()
+     public void handleKeyPressed()
     {
 
 
@@ -49,23 +52,24 @@ public class funChoice implements Scene
         
         public void handleMousePressed(){
          
-    //if yes
+    //if keep
     if(p.mousePressed==true
       && p.mouseX > p.width/4 - 150 && p.mouseX < p.width/4 + 150
       && p.mouseY > p.height*3/4 -40 && p.mouseY < p.height*3/4 +40){
         
 
-        p.changeScene(14);
-        
+        p.changeF(1);
+        p.changeScene(18);
         }
       
-      //if no
+      //if return
       else if(p.mousePressed==true
       && p.mouseX > p.width*3/4 - 150 && p.mouseX < p.width*3/4 + 150
       && p.mouseY > p.height*3/4 -40 && p.mouseY < p.height*3/4 +40){
         
         
-        p.changeScene(15);
+        //p.changeF(0);
+        p.changeScene(18);
         
         }
     }
@@ -75,3 +79,7 @@ public class funChoice implements Scene
    
 }
 
+
+    
+    
+    

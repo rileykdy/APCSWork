@@ -16,9 +16,15 @@ public class codeExp2 implements Scene
     public void display()
     {
        p.background(p.getColor1(), p.getColor2(), p.getColor3());
-      //p.textAlign(PApplet.CENTER, PApplet.CENTER);
-      p.fill(0);
-      p.textSize(40);
+      p.textAlign(PApplet.CENTER);
+    if (p.getF() > 0){
+    p.textFont(p.getFont(), 1);
+    p.textAlign(PApplet.CENTER, PApplet.CENTER);
+    
+    }
+    else;
+      p.fill(p.getTC1(), p.getTC2(), p.getTC3());
+      p.textSize(26);
       p.text("An if statement can be broken down into different conditions, for example, 'x == 10';", p.width/2, 120);
       p.text("These different conditions are connected by symbols to add criteria to an if statement.", p.width/2, 175);
       p.text("Such symbols include '||' which means 'or' and '&&' which means 'and'.", p.width/2, 240);
@@ -39,7 +45,7 @@ public class codeExp2 implements Scene
       
       
       
-      p.textSize(50);
+      p.textSize(38);
       p.fill(0);
       p.text("YES!", p.width/4, 750 );
       p.text("NO!", p.width*3/4, 750 );

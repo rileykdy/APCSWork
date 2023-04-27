@@ -16,7 +16,7 @@ public class colorChoice implements Scene
     public void display()
     {
       p.background(p.getColor1(), p.getColor2(), p.getColor3());
-      //p.textAlign(PApplet.CENTER, PApplet.CENTER);
+      
       p.stroke(255);
       
       p.fill(105, 150, 117);

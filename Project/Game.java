@@ -10,7 +10,10 @@ int current = 0;
 int c1 = 180;
 int c2 = 180;
 int c3 = 180;
-int f = 4;
+int t1 = 0;
+int t2 = 0;
+int t3 = 0;
+int f = 0;
 
  
   public void settings()
@@ -52,6 +55,12 @@ int f = 4;
         scenes.add(new Quiz(this));
         scenes.add(new Gameover7(this));
         scenes.add(new gameChoiceTwo(this));
+        scenes.add(new miniReturn(this));
+        scenes.add(new workChoice2(this)); //25
+        scenes.add(new pickFont(this));
+        scenes.add(new textChoice(this));
+        scenes.add(new End(this));
+        
     }
     
      public void draw()
@@ -85,6 +94,13 @@ int f = 4;
         c3 = xc3;
     }
     
+    public void changeTC(int xt1, int xt2, int xt3)
+    {
+        t1 = xt1;
+        t2 = xt2;
+        t3 = xt3;
+    }
+    
     public int getColor1()
     {
         return c1;
@@ -100,6 +116,24 @@ int f = 4;
     public int getColor3()
     {
         return c3;
+        
+    }
+    
+     public int getTC1()
+    {
+        return t1;
+        
+    }
+    
+    public int getTC2()
+    {
+        return t2;
+        
+    }
+    
+    public int getTC3()
+    {
+        return t3;
         
     }
     

@@ -31,7 +31,7 @@ public class Choice implements Scene
       p.stroke(181, 20, 14);
       p.rect(p.width*3/4 - 55, p.height*3/4 -40, 110, 50);
 
-      p.fill(0);
+      p.fill(p.getTC1(), p.getTC2(), p.getTC3());
       p.textSize(100);
       p.text("Ready to play?", p.width/2, 200);
       p.textSize(40);

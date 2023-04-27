@@ -14,14 +14,21 @@ public class Gameover2 implements Scene
     }
 
     public void display()
-    {
+    {p.textAlign(PApplet.CENTER);
+    if (p.getF() > 0){
+    p.textFont(p.getFont(), 1);
+    p.textAlign(PApplet.CENTER, PApplet.CENTER);
+    
+    }
+    else;
         p.background(p.getColor1(), p.getColor2(), p.getColor3());
       //p.textAlign(PApplet.CENTER, PApplet.CENTER);
-      p.fill(0);
+      p.fill(p.getTC1(), p.getTC2(), p.getTC3());
       p.textSize(150);
       p.text("GAME OVER", p.width/2, 150);
       p.textSize(45);
-      p.text("Curiosity is rewarded. Don't be complacent in your confusion!", p.width/2, 300);
+      p.text("Curiosity is rewarded.", p.width/2, 300);
+      p.text("Don't be complacent in your confusion!", p.width/2, 350);
       p.textSize(15);
       p.text("Press shift to restart or tab to return to the last choice", p.width/2, 500);
       

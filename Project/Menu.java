@@ -26,7 +26,7 @@ public class Menu implements Scene
     else;
     p.background(p.getColor1(), p.getColor2(), p.getColor3());
       
-      p.fill(0);
+      p.fill(p.getTC1(), p.getTC2(), p.getTC3());
       p.textSize(200);
       p.text("THE GAME", p.width/2, 400);
       p.textSize(25);

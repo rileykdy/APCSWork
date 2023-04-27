@@ -1,4 +1,5 @@
-//3
+//27
+//Pick text color
 
 
 import processing.core.*;
@@ -6,9 +7,9 @@ import java.util.*;
 
 
 
-public class TripleChoice implements Scene
+public class textChoice implements Scene
 {
-    public TripleChoice(Game p)
+    public textChoice(Game p)
     {
         this.p = p;
     }
@@ -17,19 +18,22 @@ public class TripleChoice implements Scene
     {
       p.background(p.getColor1(), p.getColor2(), p.getColor3());
       
-      p.fill(255);
-      p.stroke(82, 140, 222);
+      p.stroke(255);
+      
+      p.fill(32, 87, 48);
       p.rect(p.width/4 - 105, p.height*3/4 -40, 210, 50);
+      
+      p.fill(0, 0, 0);
       p.rect(p.width/2 - 105, p.height*3/4 -40, 210, 50);
+      
+      p.fill(29, 49, 115);
       p.rect(p.width*3/4 - 105, p.height*3/4 -40, 210, 50);
 
-      p.fill(p.getTC1(), p.getTC2(), p.getTC3());
-      p.textSize(100);
-      p.text("Ready to play?", p.width/2, 200);
-      p.textSize(50);
-      p.text("OPTION 1", p.width/4, p.height*3/4 );
-      p.text("OPTION 2", p.width/2, p.height*3/4 );
-      p.text("OPTION 3", p.width*3/4, p.height*3/4 );
+      p.fill(0);
+      p.textSize(60);
+      p.text("Pick a new text color!", p.width/2, 200);
+      p.textSize(30);
+      p.text("Press shift to continue once you are satisfied with your choice.", p.width/2, 800);
 
     }
     
@@ -37,35 +41,43 @@ public class TripleChoice implements Scene
 
     public void handleKeyPressed()
     {
-
+    if(p.keyCode == PApplet.SHIFT){
+        p.key = PApplet.ENTER;
+        p.changeScene(28);
+       
+      }
 
         }
         
         public void handleMousePressed(){
+    //green
     if(p.mousePressed==true
       && p.mouseX > p.width/4 - 105 && p.mouseX < p.width/4 + 105
       && p.mouseY > p.height*3/4 -40 && p.mouseY < p.height*3/4 +40){
         
-        //p.key = PApplet.ENTER;
-        p.changeScene(4);
+        p.changeTC(32, 87, 48);
+        
         
         }
       
+      //black
       else if(p.mousePressed==true
       && p.mouseX > p.width*3/4 - 105 && p.mouseX < p.width*3/4 + 105
       && p.mouseY > p.height*3/4 -40 && p.mouseY < p.height*3/4 +40){
         
-        //p.key = PApplet.ENTER;
-        p.changeScene(4);
+        
+         p.changeTC(0, 0, 0);
         
         }
         
+    
+      //blue
       else if(p.mousePressed==true
       && p.mouseX > p.width/2 - 105 && p.mouseX < p.width/2 + 105
       && p.mouseY > p.height*3/4 -40 && p.mouseY < p.height*3/4 +40){
         
-        //p.key = PApplet.ENTER;
-        p.changeScene(4);
+        
+         p.changeTC(29, 49, 115);
         
         }
     }
@@ -74,5 +86,3 @@ public class TripleChoice implements Scene
     private Game p;
    
 }
-
-

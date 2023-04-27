@@ -16,9 +16,15 @@ public class Rules implements Scene
     public void display()
     {
        p.background(p.getColor1(), p.getColor2(), p.getColor3());
-     // p.textAlign(PApplet.CENTER, PApplet.CENTER);
-      p.fill(0);
-      p.textSize(45);
+     p.textAlign(PApplet.CENTER);
+    if (p.getF() > 0){
+    p.textFont(p.getFont(), 1);
+    p.textAlign(PApplet.CENTER, PApplet.CENTER);
+    
+    }
+    else;
+      p.fill(p.getTC1(), p.getTC2(), p.getTC3());
+      p.textSize(32);
       p.text("Here are the rules of this game, if you could even call it that.", p.width/2, 120);
       p.text("1. Even if you 'restart' and return to the title screen, all the progress that", p.width/2, 185);
       p.text("you've made on the game will remain. The only real way to restart", p.width/2, 240);
@@ -39,7 +45,7 @@ public class Rules implements Scene
       
       
       
-      p.textSize(50);
+      p.textSize(40);
       p.fill(0);
       p.text("YES!", p.width/4, 750 );
       p.text("NO!", p.width*3/4, 750 );

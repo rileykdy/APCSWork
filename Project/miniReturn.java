@@ -1,14 +1,14 @@
-//7
-//There is no game
+//24
+//Return to minigame 1
 
 import processing.core.*;
 import java.util.*;
 
 
 
-public class noGame implements Scene
+public class miniReturn implements Scene
 {
-    public noGame(Game p)
+    public miniReturn(Game p)
     {
         this.p = p;
     }
@@ -24,20 +24,18 @@ public class noGame implements Scene
     }
     else;
       p.fill(p.getTC1(), p.getTC2(), p.getTC3());
-      p.textSize(45);
-      p.text("Well you didn't think you'd get interesting graphics" , p.width/2, 130);
-      p.text("just for opening a game, did you? If you want this", p.width/2, 185);
-      p.text(" game to stop looking like it was made in five minutes, ", p.width/2, 240);
-      p.text("you'll have to spend at least five minutes on it.", p.width/2, 295);
+      p.textSize(40);
+      p.text("Well if you hated the minigame that much maybe", p.width/2, 130);
+      p.text("you should play again and reconsider." , p.width/2, 180);
       p.textSize(25);
-      p.text("Press shift to continue.", p.width/2, 700);
+      p.text("Press shift to return to the minigame.", p.width/2, 700);
     }
 
     public void handleKeyPressed()
     {
 if(p.keyCode == PApplet.SHIFT){
         p.key = PApplet.ENTER;
-        p.changeScene(8);
+        p.changeScene(11);
        
       }
       }
