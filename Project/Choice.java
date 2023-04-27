@@ -17,7 +17,14 @@ public class Choice implements Scene
     public void display()
     {
       p.background(p.getColor1(), p.getColor2(), p.getColor3());
-      p.textAlign(PApplet.CENTER);
+     
+    p.textAlign(PApplet.CENTER);
+    if (p.getF() > 0){
+    p.textFont(p.getFont(), 1);
+    p.textAlign(PApplet.CENTER, PApplet.CENTER);
+  
+    }
+    else;
       p.fill(255);
       p.stroke(13, 168, 42);
       p.rect(p.width/4 - 55, p.height*3/4 -40, 110, 50);
@@ -27,7 +34,7 @@ public class Choice implements Scene
       p.fill(0);
       p.textSize(100);
       p.text("Ready to play?", p.width/2, 200);
-      p.textSize(50);
+      p.textSize(40);
       p.text("YES!", p.width/4, p.height*3/4 );
       p.text("NO!", p.width*3/4, p.height*3/4 );
 

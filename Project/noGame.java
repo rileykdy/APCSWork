@@ -16,7 +16,7 @@ public class noGame implements Scene
     public void display()
     {
        p.background(p.getColor1(), p.getColor2(), p.getColor3());
-      p.textAlign(PApplet.CENTER);
+      //p.textAlign(PApplet.CENTER, PApplet.CENTER);
       p.fill(0);
       p.textSize(50);
       p.text("Well you didn't think you'd get interesting graphics" , p.width/2, 130);

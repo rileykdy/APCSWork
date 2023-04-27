@@ -16,10 +16,10 @@ public class Gameover1 implements Scene
     public void display()
     {
         p.background(p.getColor1(), p.getColor2(), p.getColor3());
-      p.textAlign(PApplet.CENTER);
+      //p.textAlign(PApplet.CENTER, PApplet.CENTER);
       p.fill(0);
       p.textSize(150);
-      p.text("GAME OVER", p.width/2, 200);
+      p.text("GAME OVER", p.width/2, 150);
       p.textSize(40);
       p.text("Why did you do that??", p.width/2, 300);
       p.textSize(15);

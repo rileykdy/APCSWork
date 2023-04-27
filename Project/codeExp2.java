@@ -16,7 +16,7 @@ public class codeExp2 implements Scene
     public void display()
     {
        p.background(p.getColor1(), p.getColor2(), p.getColor3());
-      p.textAlign(PApplet.CENTER);
+      //p.textAlign(PApplet.CENTER, PApplet.CENTER);
       p.fill(0);
       p.textSize(40);
       p.text("An if statement can be broken down into different conditions, for example, 'x == 10';", p.width/2, 120);

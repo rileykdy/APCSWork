@@ -6,25 +6,26 @@ import java.util.*;
 public class Game extends PApplet{
 
 //String gameState;
-int current = 10;
+int current = 0;
 int c1 = 180;
 int c2 = 180;
 int c3 = 180;
+int f = 4;
 
-//PApplet.PFont titleFont;
-
+ 
   public void settings()
     {
         fullScreen();
-      
     }
 
     public void setup()
     {
     
         
-        //PApplet.titleFont = PApplet.createFont("04B_30__.TTF", 24);
+        Minecraft = createFont("Minecraftia-Regular.ttf", 3);
+        Pixel = createFont("04B_30__.TTF", 3);
         
+    
         
         scenes = new ArrayList<Scene>(); 
         scenes.add(new Menu(this)); //0
@@ -102,11 +103,37 @@ int c3 = 180;
         
     }
     
-    private ArrayList<Scene> scenes;
+    public int getF()
+    { return f;}
     
+    public void changeF(int f1){
+        
+        f = f1;
+    }
+    
+    public PFont getFont(){
+        
+        
+        if (f == 1){
+        return Minecraft;
+        }
+        
+        else if (f == 2){
+            return Pixel;
+        }
+        
+        else return null;
+        
+    }
+    
+    private ArrayList<Scene> scenes;
+    private PFont Minecraft; 
+    private PFont Pixel;
     
     public static void main(String[] args)
     {
-      PApplet.main("Game");
+      
+        PApplet.main("Game");
+       
     }
 }

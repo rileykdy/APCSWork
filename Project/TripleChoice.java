@@ -16,7 +16,7 @@ public class TripleChoice implements Scene
     public void display()
     {
       p.background(p.getColor1(), p.getColor2(), p.getColor3());
-      p.textAlign(PApplet.CENTER);
+      
       p.fill(255);
       p.stroke(82, 140, 222);
       p.rect(p.width/4 - 105, p.height*3/4 -40, 210, 50);

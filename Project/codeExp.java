@@ -16,7 +16,7 @@ public class codeExp implements Scene
     public void display()
     {
        p.background(p.getColor1(), p.getColor2(), p.getColor3());
-      p.textAlign(PApplet.CENTER);
+      //p.textAlign(PApplet.CENTER, PApplet.CENTER);
       p.fill(0);
       p.textSize(45);
       p.text("This game wouldn't really be about making a game if I didn't force you to ", p.width/2, 120);
