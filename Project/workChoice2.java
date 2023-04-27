@@ -32,7 +32,7 @@ public class workChoice2 implements Scene
       p.fill(p.getTC1(), p.getTC2(), p.getTC3());
       p.textSize(45);
       p.text("What part of the game do you want to work on?", p.width/2, 200);
-      p.textSize(35);
+      p.textSize(27);
       p.fill(0);
       p.text("Font/Background", p.width/4, p.height*3/4 );
       p.text("Text Color", p.width*3/4, p.height*3/4 );

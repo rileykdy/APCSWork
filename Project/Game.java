@@ -6,14 +6,14 @@ import java.util.*;
 public class Game extends PApplet{
 
 //String gameState;
-int current = 0;
+int current = 27;
 int c1 = 180;
 int c2 = 180;
 int c3 = 180;
 int t1 = 0;
 int t2 = 0;
 int t3 = 0;
-int f = 0;
+int f = 1;
 
  
   public void settings()
@@ -60,6 +60,7 @@ int f = 0;
         scenes.add(new pickFont(this));
         scenes.add(new textChoice(this));
         scenes.add(new End(this));
+        scenes.add(new fontMes(this));
         
     }
     

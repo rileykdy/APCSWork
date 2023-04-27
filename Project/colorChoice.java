@@ -28,7 +28,7 @@ public class colorChoice implements Scene
       p.fill(187, 153, 201);
       p.rect(p.width*3/4 - 105, p.height*3/4 -40, 210, 50);
 
-      p.fill(0);
+      p.fill(p.getTC1(), p.getTC2(), p.getTC3());
       p.textSize(60);
       p.text("Pick a new background color!", p.width/2, 200);
       p.textSize(30);

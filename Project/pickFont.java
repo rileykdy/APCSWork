@@ -68,8 +68,8 @@ public class pickFont implements Scene
       && p.mouseY > p.height*3/4 -40 && p.mouseY < p.height*3/4 +40){
         
         
-        //p.changeF(0);
-        p.changeScene(18);
+        p.changeF(1);
+        p.changeScene(29);
         
         }
     }
