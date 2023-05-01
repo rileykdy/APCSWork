@@ -26,11 +26,12 @@ public class Gameover4 implements Scene
       p.fill(p.getTC1(), p.getTC2(), p.getTC3());
       p.textSize(150);
       p.text("GAME OVER", p.width/2, 150);
-      p.textSize(40);
-      p.text("I don't expect anyone to see this screen.", p.width/2, 300);
-      p.text("I made the minigame easy on purpose.", p.width/2, 350);
+      p.textSize(31);
+      p.text("I thought the game was too simple. Thanks for proving me wrong.", p.width/2, 300);
+      p.text("Now that you chose the minigame, theres no way out except through.", p.width/2, 350);
+      p.text("Just keep trying. Or give up and restart so you can choose the work option.", p.width/2, 400);
       p.textSize(15);
-      p.text("Press shift to restart or tab to return to the game", p.width/2, 500);
+      p.text("Press shift to restart or tab to return to the game", p.width/2, 600);
       
     }
 

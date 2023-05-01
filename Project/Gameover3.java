@@ -27,9 +27,9 @@ public class Gameover3 implements Scene
       p.textSize(150);
       p.text("GAME OVER", p.width/2, 150);
       p.textSize(30);
-      p.text("The rules couldn't have possibly been explained more clearly.", p.width/2, 300);
-      p.text("If you didn't get that I don't think you can make it through the rest of the game.", p.width/2, 355);
-      p.text("I don't know what to tell you, maybe go play pac-man or something?", p.width/2, 410);
+      p.text("The rules couldn't weren't all that complicated. If you didn't", p.width/2, 300);
+      p.text("get that, maybe just trial and error it until you figure it out.", p.width/2, 355);
+      p.text("Or give up.", p.width/2, 410);
       p.textSize(15);
       p.text("Press shift to restart or tab to return to the last choice", p.width/2, 700);
       

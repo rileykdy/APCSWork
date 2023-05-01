@@ -25,7 +25,7 @@ public class Rules implements Scene
     else;
       p.fill(p.getTC1(), p.getTC2(), p.getTC3());
       p.textSize(32);
-      p.text("Here are the rules of this game, if you could even call it that.", p.width/2, 120);
+      p.text("Here are the rules of this game.", p.width/2, 120);
       p.text("1. Even if you 'restart' and return to the title screen, all the progress that", p.width/2, 185);
       p.text("you've made on the game will remain. The only real way to restart", p.width/2, 240);
       p.text("the game is to press the escape key.", p.width/2, 295);

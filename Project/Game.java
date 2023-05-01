@@ -6,14 +6,14 @@ import java.util.*;
 public class Game extends PApplet{
 
 //String gameState;
-int current = 27;
+int current = 0;
 int c1 = 180;
 int c2 = 180;
 int c3 = 180;
 int t1 = 0;
 int t2 = 0;
 int t3 = 0;
-int f = 1;
+int f = 0;
 
  
   public void settings()
